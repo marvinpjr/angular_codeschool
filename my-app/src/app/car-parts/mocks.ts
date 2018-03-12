@@ -5,17 +5,23 @@ export const CARPARTS: CarPart[] = [{
     "name": "Super Tires",
     "description": "These tires are the very best",
     "price": 4.99,
-    "inStock": 5
+    "inStock": 5,
+    "image": "/images/tire.png",
+    "featured": false
   },{
     "id": 2,
     "name": "Reinforced Shocks",
     "description": "Shocks made by kryptonite",
     "price": 2.99,
-    "inStock": 0
+    "inStock": 0,
+    "image": "/images/shocks.jpg",
+    "featured": true
   },{
     "id": 3,
     "name": "Sparky Plugs",
     "description": "Extra sparks in dem plugs",
     "price": 5.99,
-    "inStock": 7
+    "inStock": 7,
+    "image": "/images/plugs.jpg",
+    "featured": false
   }];
