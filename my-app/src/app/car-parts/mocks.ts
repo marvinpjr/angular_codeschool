@@ -7,7 +7,8 @@ export const CARPARTS: CarPart[] = [{
     "price": 4.99,
     "inStock": 5,
     "image": "/images/tire.png",
-    "featured": false
+    "featured": false,
+    "quantity": 0
   },{
     "id": 2,
     "name": "Reinforced Shocks",
@@ -15,7 +16,8 @@ export const CARPARTS: CarPart[] = [{
     "price": 2.99,
     "inStock": 0,
     "image": "/images/shocks.jpg",
-    "featured": true
+    "featured": true,
+    "quantity": 0
   },{
     "id": 3,
     "name": "Sparky Plugs",
@@ -23,5 +25,6 @@ export const CARPARTS: CarPart[] = [{
     "price": 5.99,
     "inStock": 7,
     "image": "/images/plugs.jpg",
-    "featured": false
+    "featured": false,
+    "quantity": 0
   }];
