@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import { CarPart } from './car-part';
-import { CARPARTS } from './mocks'
+import { RacingDataService } from './racing-data.service';
 
 @Component({
     selector: 'car-parts',
@@ -8,19 +8,25 @@ import { CARPARTS } from './mocks'
     styleUrls: ['./car-parts.component.css']
 })
 export class CarPartsComponent {  
-    carParts: CarPart[];
+    carParts: CarPart[];        
 
-    ngOnInit(){
-        this.carParts = CARPARTS;
+    constructor(private racingDataService: RacingDataService){}
+
+    ngOnInit(){        
+        this.racingDataService.getCarParts()
+            .subscribe(carParts => this.carParts = carParts);
     }
 
     totalCarParts(){ 
     let sum = 0;
-    for (let carPart of this.carParts){
-        sum += carPart.inStock;
-    }
-    return sum;
-    }
+
+    if (Array.isArray(this.carParts)){
+        for (let carPart of this.carParts){
+            sum += carPart.inStock;
+        }
+        return sum;
+        }
+    }    
 
     upQuantity(carPart: CarPart){
         if (carPart.quantity < carPart.inStock) carPart.quantity++;        
